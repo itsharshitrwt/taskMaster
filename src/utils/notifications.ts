@@ -20,7 +20,7 @@ export const showNotification = (title: string, body: string) => {
       silent: false,
     });
 
-    // Auto close after 5 seconds
+    
     setTimeout(() => notification.close(), 5000);
   }
 };

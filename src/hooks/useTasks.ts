@@ -11,7 +11,6 @@ export function useTasks() {
       const parsedTasks = JSON.parse(storedTasks);
       setTasks(parsedTasks);
       
-      // Schedule notifications for existing tasks
       parsedTasks.forEach((task: Task) => {
         if (task.notificationTime && !task.completed) {
           scheduleNotification(task);
